@@ -29,7 +29,9 @@ class Landing extends Component {
             placeholder="Search"
           />
         </form>
-        <Link to="/search" onClick={this.props.clearSearchTerm}>or Browse All</Link>
+        <Link to="/search" onClick={this.props.clearSearchTerm}>
+          or Browse All
+        </Link>
       </div>
     );
   }
@@ -41,7 +43,7 @@ const mapDispatchToProps = (dispatch: Function) => ({
     dispatch(setSearchTerm(event.target.value));
   },
   clearSearchTerm() {
-    dispatch(setSearchTerm(''))
+    dispatch(setSearchTerm(''));
   }
 });
 

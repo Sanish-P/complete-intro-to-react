@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { setSearchTerm } from './actionCreators';
 import { connect } from 'react-redux';
+import { setSearchTerm } from './actionCreators';
 
 const Header = (props: { showSearch?: boolean, searchTerm: string, handleSearchTermChange: Function }) => {
   let utilSpace;
@@ -14,18 +14,14 @@ const Header = (props: { showSearch?: boolean, searchTerm: string, handleSearchT
   } else {
     utilSpace = (
       <h1>
-        <Link to="/search">
-          Back
-        </Link>
+        <Link to="/search">Back</Link>
       </h1>
     );
   }
   return (
     <header>
       <h1>
-        <Link to="/">
-          svideo
-        </Link>
+        <Link to="/">svideo</Link>
       </h1>
       {utilSpace}
     </header>
