@@ -19,7 +19,7 @@ export function getAPIDetails(imdbID: string) {
         dispatch(addAPIData(response.data));
       })
       .catch(error => {
-        console.error('axios error', error);
+        console.error('axios error', error); // eslint-disable-line no-console
       });
   };
 }

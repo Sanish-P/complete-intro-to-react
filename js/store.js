@@ -8,6 +8,7 @@ const store = createStore(
   reducer,
   compose(
     applyMiddleware(thunk),
+    // eslint-disable-next-line
     typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
   )
 );
